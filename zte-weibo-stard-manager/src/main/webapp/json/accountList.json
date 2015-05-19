@@ -1,0 +1,43 @@
+{
+    "data": {
+        "accountList": [
+            {
+                "id": 1,
+                "name": "测试1",
+                "state": "1"
+            },{
+                "id": 2,
+                "name": "测试2",
+                "state": "0"
+            },{
+                "id": 3,
+                "name": "测试3",
+                "state": "1"
+            },{
+                "id": 4,
+                "name": "测试4",
+                "state": "0"
+            },{
+                "id": 2,
+                "name": "测试2",
+                "state": "0"
+            },{
+                "id": 3,
+                "name": "测试3",
+                "state": "1"
+            },{
+                "id": 4,
+                "name": "测试4",
+                "state": "0"
+            }
+        ]
+    },
+    "page": {
+        "currentPage": 1,
+        "end": 10,
+        "pages": 2,
+        "pernum": 10,
+        "start": 0,
+        "total": 20
+    }
+}

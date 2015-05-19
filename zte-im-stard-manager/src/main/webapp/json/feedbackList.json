@@ -1,0 +1,51 @@
+{
+    "data": {
+        "newsList": [
+            {
+                "id": 1,
+                "name": "测试1",
+                "mobile": "18800030767",
+                "device": "android",
+                "os": "4.4.2",
+                "resolution": "1024*768",
+                "content": "VElNRT0xMzg2MjAxNDQyMDAwCkZJTkdFUlBSSU5UPWdvb2dsZS9yYeKApuKApg==",
+                "time": "2014-12-22 13:52"
+            },{
+                "id": 2,
+                "name": "测试2",
+                "mobile": "18800030761",
+                "device": "android",
+                "os": "4.4.2",
+                "resolution": "1024*768",
+                "content": "VElNRT0xMzg2MjAxNDQyMDAwCkZJTkdFUlBSSU5UPWdvb2dsZS9yYeKApuKApg==",
+                "time": "2014-12-22 13:52"
+            },{
+                "id": 3,
+                "name": "测试3",
+                "mobile": "18800030762",
+                "device": "android",
+                "os": "4.4.2",
+                "resolution": "1024*768",
+                "content": "VElNRT0xMzg2MjAxNDQyMDAwCkZJTkdFUlBSSU5UPWdvb2dsZS9yYeKApuKApg==",
+                "time": "2014-12-22 13:52"
+            },{
+                "id": 4,
+                "name": "测试4",
+                "mobile": "18800030763",
+                "device": "android",
+                "os": "4.4.2",
+                "resolution": "1024*768",
+                "content": "VElNRT0xMzg2MjAxNDQyMDAwCkZJTkdFUlBSSU5UPWdvb2dsZS9yYeKApuKApg==",
+                "time": "2014-12-22 13:52"
+            }
+        ]
+    },
+    "page": {
+        "currentPage": 1,
+        "end": 10,
+        "pages": 2,
+        "pernum": 10,
+        "start": 0,
+        "total": 20
+    }
+}

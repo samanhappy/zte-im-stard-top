@@ -1,0 +1,14 @@
+﻿#kkpager{margin-top: 30px; text-align: center;}
+#kkpager a{display: inline-block;font-size: 12px;height: 18px;line-height: 18px; width: 18px;border: 1px solid #e4e4e4;margin: 0 6px;color: #909090;}
+#kkpager span{font-size:9px;display:inline-block;text-align:center;}
+#kkpager a i{font-size: 4px;}
+#kkpager span.disabled{margin:0 3px;height: 18px;line-height: 18px; width: 18px;border: 1px solid #e4e4e4;background-color:#FFF;color:#909090;cursor:default;}
+#kkpager a b,#kkpager a.disabled{border: 1px solid #e4e4e4;color: #909090;}
+#kkpager a.disabled:hover{border: 1px solid #e4e4e4;color: #909090;cursor:default;}
+#kkpager span.curr{margin:0 3px;font-size:10px;color: #fff;border: 1px solid #e4e4e4;background-color:#999;font-family:arial;}
+#kkpager a.curr{color: #6287ae;border: 1px solid #6287ae;}
+#kkpager a:hover{color: #6287ae;border: 1px solid #6287ae;text-decoration:none;}
+#kkpager span.normalsize{font-size:9px;}
+#kkpager_gopage_wrap{display:inline-block;width:44px;height:18px;border:2px solid #999;margin:0px 1px;padding:0px;position:relative;left:0px;top:5px;}
+#kkpager_btn_go {cursor: pointer;width:44px;height:20px;line-height:20px;padding:0px;font-family:"Microsoft YaHei";text-align:center;border:0px;background-color:#d71317;color:#FFF;position:absolute;left:0px;top:-1px;display:none;}
+#kkpager_btn_go_input{width:42px;height:16px;text-align:center;border:0px;position:absolute;left:0px;top:0px;outline:none;padding: 0;}

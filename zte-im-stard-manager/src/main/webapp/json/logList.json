@@ -1,0 +1,45 @@
+{
+    "data": {
+        "newsList": [
+            {
+                "uname": "测试1",
+                "uid": "10220000657",
+                "oper": "用户登录",
+                "creatime": "2014-12-22 15:20",
+                "content": ""
+            },{
+                "uname": "测试2",
+                "uid": "10220000657",
+                "oper": "用户登录",
+                "creatime": "2014-12-22 15:20",
+                "content": ""
+            },{
+                "uname": "测试3",
+                "uid": "10220000657",
+                "oper": "用户登录",
+                "creatime": "2014-12-22 15:20",
+                "content": ""
+            },{
+                "uname": "测试4",
+                "uid": "10220000657",
+                "oper": "用户登录",
+                "creatime": "2014-12-22 15:20",
+                "content": ""
+            },{
+                "uname": "测试5",
+                "uid": "10220000657",
+                "oper": "用户登录",
+                "creatime": "2014-12-22 15:20",
+                "content": ""
+            }
+        ]
+    },
+    "page": {
+        "currentPage": 1,
+        "end": 10,
+        "pages": 2,
+        "pernum": 10,
+        "start": 0,
+        "total": 20
+    }
+}

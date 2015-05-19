@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.my.UcGroupMapperMy">
+	<resultMap type="com.zte.im.mybatis.bean.my.UcGroupMy" id="ucGroupMyMap">
+		<id property="id" column="ID" />
+		<result property="name" column="name" />
+		<result property="typeId" column="type_id" />
+		<result property="tenantId" column="tenant_id" />
+		<result property="fullId" column="full_id" />
+	</resultMap>
+
+	<select id="selectGroupTree" resultMap="ucGroupMyMap"
+		parameterType="string">
+		select *
+		from UC_GROUP
+		where type_id = #{typeId}
+		order by
+		sequ asc
+	</select>
+
+	<select id="getGroupMemberByUid" resultType="com.zte.im.mybatis.bean.UcGroupMember"
+		parameterType="map">
+		select ugm.id, ugm.group_id as groupId, ugm.member_id as memberId
+		from uc_group_member ugm
+		left join uc_group ug
+		on ugm.group_id =
+		ug.id
+		where ugm.tenant_id = #{tenantId}
+		<if test="typeId != null">
+			and ug.type_id = #{typeId}
+		</if>
+		<if test="uid != null">
+			and ugm.member_id = #{uid}
+		</if>
+	</select>
+
+	<select id="selectGroupRoot" resultType="com.zte.im.mybatis.bean.UcTenant"
+		parameterType="string">
+		select *
+		from UC_TENANT
+	</select>
+
+</mapper>

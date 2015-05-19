@@ -1,0 +1,51 @@
+{
+    "data": {
+        "recordList": [
+            {
+                "id": "1",
+                "title": "测试标题",
+                "content": "测试测试内容测试测试内容测试测试内容测试测试内容测试测试测试内容测试测试内容测试测试内容测试测试内容",
+                "author":"张三",
+                "category":"个人",
+                "time":"2014-10-29 14:29",
+                "operation":"1"
+            },
+            {
+                "id": "2",
+                "title": "测试标题",
+                "content": "测试测试内容",
+                "author":"张三",
+                "category":"个人",
+                "time":"2014-10-29 14:29",
+                "operation":"1"
+            },
+            {
+                "id": "3",
+                "title": "测试标题",
+                "content": "测试测试内容",
+                "author":"张三",
+                "category":"个人",
+                "time":"2014-10-29 14:29",
+                "operation":"1"
+            }
+        ],
+        "next": 2,
+        "offset": 0,
+        "pageSize": 10,
+        "previous": 0,
+        "totalPage": 1,
+        "totalRecord": 8
+    },
+    "page": {
+        "currentPage": 1,
+        "end": 10,
+        "pages": 2,
+        "pernum": 10,
+        "start": 0,
+        "total": 20
+    },
+    "res": {
+        "reCode": "1",
+        "resMessage": "Operation is successful"
+    }
+}

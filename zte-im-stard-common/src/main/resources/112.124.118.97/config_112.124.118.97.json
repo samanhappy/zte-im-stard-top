@@ -1,0 +1,8 @@
+{
+    "fdfs_http_host": "http://112.124.118.97/", 
+    "tracker_servers": "112.124.118.97:22000",
+    "redis_servers": "112.124.118.97:6379",
+    "sso_server":"http://58.60.230.115/emm/token/service.jssm",
+    "mqtt_server":"mosquitto_pub -h 112.124.118.97 -p 8082 -q 1 -f ",
+    "mqtt_params":" -u 12 -P passwd -i 0"
+}

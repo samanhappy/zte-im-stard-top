@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.MnInformMapper" >
+  <resultMap id="BaseResultMap" type="com.zte.im.mybatis.bean.MnInform" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Map_Where_Clause" >
+    <where >
+      <if test="null != id" >
+        and mi.id = #{id}
+      </if>
+      <if test="null != like_id" >
+        and mi.id like '%' || #{like_id} || '%'
+      </if>
+      <if test="null != title" >
+        and mi.title = #{title}
+      </if>
+      <if test="null != like_title" >
+        and mi.title like '%' || #{like_title} || '%'
+      </if>
+      <if test="null != address" >
+        and mi.address = #{address}
+      </if>
+      <if test="null != like_address" >
+        and mi.address like '%' || #{like_address} || '%'
+      </if>
+      <if test="null != remark" >
+        and mi.remark = #{remark}
+      </if>
+      <if test="null != like_remark" >
+        and mi.remark like '%' || #{like_remark} || '%'
+      </if>
+      <if test="null != begin_startTime" >
+        and mi.start_time &gt;= #{begin_startTime}
+      </if>
+      <if test="null != end_startTime" >
+        and mi.start_time &lt;= #{end_startTime}
+      </if>
+      <if test="null != begin_endTime" >
+        and mi.end_time &gt;= #{begin_endTime}
+      </if>
+      <if test="null != end_endTime" >
+        and mi.end_time &lt;= #{end_endTime}
+      </if>
+      <if test="null != status" >
+        and mi.status = #{status}
+      </if>
+      <if test="null != like_status" >
+        and mi.status like '%' || #{like_status} || '%'
+      </if>
+      <if test="null != creator" >
+        and mi.creator = #{creator}
+      </if>
+      <if test="null != like_creator" >
+        and mi.creator like '%' || #{like_creator} || '%'
+      </if>
+      <if test="null != begin_createTime" >
+        and mi.create_time &gt;= #{begin_createTime}
+      </if>
+      <if test="null != end_createTime" >
+        and mi.create_time &lt;= #{end_createTime}
+      </if>
+    </where>
+  </sql>
+  <sql id="Order_By_Clause" >
+    <if test="null != order" >
+      <trim prefix="order by " >
+        <foreach collection="order" item="orderItem" separator="," >
+          <if test="'id' == orderItem.column" >
+            mi.id ${orderItem.dir}
+          </if>
+          <if test="'title' == orderItem.column" >
+            mi.title ${orderItem.dir}
+          </if>
+          <if test="'address' == orderItem.column" >
+            mi.address ${orderItem.dir}
+          </if>
+          <if test="'remark' == orderItem.column" >
+            mi.remark ${orderItem.dir}
+          </if>
+          <if test="'startTime' == orderItem.column" >
+            mi.start_time ${orderItem.dir}
+          </if>
+          <if test="'endTime' == orderItem.column" >
+            mi.end_time ${orderItem.dir}
+          </if>
+          <if test="'status' == orderItem.column" >
+            mi.status ${orderItem.dir}
+          </if>
+          <if test="'creator' == orderItem.column" >
+            mi.creator ${orderItem.dir}
+          </if>
+          <if test="'createTime' == orderItem.column" >
+            mi.create_time ${orderItem.dir}
+          </if>
+        </foreach>
+      </trim>
+    </if>
+  </sql>
+  <sql id="Base_Column_List" >
+    mi.id, mi.title, mi.address, mi.remark, mi.start_time, mi.end_time, mi.status, mi.creator, 
+    mi.create_time
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from mn_inform mi
+    where mi.id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByMap" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <include refid="Base_Column_List" />
+    from mn_inform mi
+    <include refid="Map_Where_Clause" />
+    <include refid="Order_By_Clause" />
+  </select>
+  <select id="countByMap" resultType="java.lang.Integer" parameterType="map" >
+    select count(1)
+    from mn_inform mi
+    <include refid="Map_Where_Clause" />
+  </select>
+  <insert id="insertSelective" parameterType="com.zte.im.mybatis.bean.MnInform" >
+    insert into mn_inform
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="startTime != null" >
+        start_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="creator != null" >
+        creator,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null" >
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <delete id="deleteById" parameterType="java.lang.String" >
+    delete from mn_inform
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByIds" >
+    delete from mn_inform where id in 
+    <foreach collection="list" item="id" open="(" separator="," close=")" >
+      #{id}
+    </foreach>
+  </delete>
+  <delete id="deleteByMap" >
+    delete from mn_inform mi
+    <include refid="Map_Where_Clause" />
+  </delete>
+  <update id="updateSelectiveById" parameterType="com.zte.im.mybatis.bean.MnInform" >
+    update mn_inform
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null" >
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="creator != null" >
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateSelectiveByMap" parameterType="map" >
+    update mn_inform mi
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null" >
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startTime != null" >
+        start_time = #{record.startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.endTime != null" >
+        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creator != null" >
+        creator = #{record.creator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <include refid="Map_Where_Clause" />
+  </update>
+</mapper>

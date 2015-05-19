@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.MnParticipantMapper" >
+  <resultMap id="BaseResultMap" type="com.zte.im.mybatis.bean.MnParticipant" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="inform_id" property="informId" jdbcType="VARCHAR" />
+    <result column="participant_id" property="participantId" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="deal_time" property="dealTime" jdbcType="TIMESTAMP" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="cn" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Map_Where_Clause" >
+    <where >
+      <if test="null != id" >
+        and mp.id = #{id}
+      </if>
+      <if test="null != like_id" >
+        and mp.id like '%' || #{like_id} || '%'
+      </if>
+      <if test="null != informId" >
+        and mp.inform_id = #{informId}
+      </if>
+      <if test="null != like_informId" >
+        and mp.inform_id like '%' || #{like_informId} || '%'
+      </if>
+      <if test="null != participantId" >
+        and mp.participant_id = #{participantId}
+      </if>
+      <if test="null != like_participantId" >
+        and mp.participant_id like '%' || #{like_participantId} || '%'
+      </if>
+      <if test="null != status" >
+        and mp.status = #{status}
+      </if>
+      <if test="null != like_status" >
+        and mp.status like '%' || #{like_status} || '%'
+      </if>
+      <if test="null != begin_dealTime" >
+        and mp.deal_time &gt;= #{begin_dealTime}
+      </if>
+      <if test="null != end_dealTime" >
+        and mp.deal_time &lt;= #{end_dealTime}
+      </if>
+      <if test="null != remark" >
+        and mp.remark = #{remark}
+      </if>
+      <if test="null != like_remark" >
+        and mp.remark like '%' || #{like_remark} || '%'
+      </if>
+    </where>
+  </sql>
+  <sql id="Order_By_Clause" >
+    <if test="null != order" >
+      <trim prefix="order by " >
+        <foreach collection="order" item="orderItem" separator="," >
+          <if test="'id' == orderItem.column" >
+            mp.id ${orderItem.dir}
+          </if>
+          <if test="'informId' == orderItem.column" >
+            mp.inform_id ${orderItem.dir}
+          </if>
+          <if test="'participantId' == orderItem.column" >
+            mp.participant_id ${orderItem.dir}
+          </if>
+          <if test="'status' == orderItem.column" >
+            mp.status ${orderItem.dir}
+          </if>
+          <if test="'dealTime' == orderItem.column" >
+            mp.deal_time ${orderItem.dir}
+          </if>
+          <if test="'remark' == orderItem.column" >
+            mp.remark ${orderItem.dir}
+          </if>
+        </foreach>
+      </trim>
+    </if>
+  </sql>
+  <sql id="Base_Column_List" >
+    mp.id, mp.inform_id, mp.participant_id, mp.status, mp.deal_time, mp.remark
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from mn_participant mp
+    where mp.id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByMap" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <include refid="Base_Column_List" />
+    from mn_participant mp
+    <include refid="Map_Where_Clause" />
+    <include refid="Order_By_Clause" />
+  </select>
+  
+    <select id="selectParticipantByMap" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <include refid="Base_Column_List" />
+    from mn_participant mp
+    where mp.inform_id = #{informId}
+    <include refid="Order_By_Clause" />
+  </select>
+  
+  <select id="selectNoDealParticipantByMap" resultMap="BaseResultMap" parameterType="map" >
+    select
+    <include refid="Base_Column_List" />
+    from mn_participant mp
+    where mp.inform_id = #{informId} and mp.status is null
+    <include refid="Order_By_Clause" />
+  </select>
+  
+  
+  
+  
+  <select id="countByMap" resultType="java.lang.Integer" parameterType="map" >
+    select count(1)
+    from mn_participant mp
+    <include refid="Map_Where_Clause" />
+  </select>
+  <insert id="insertSelective" parameterType="com.zte.im.mybatis.bean.MnParticipant" >
+    insert into mn_participant
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="informId != null" >
+        inform_id,
+      </if>
+      <if test="participantId != null" >
+        participant_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="dealTime != null" >
+        deal_time,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="informId != null" >
+        #{informId,jdbcType=VARCHAR},
+      </if>
+      <if test="participantId != null" >
+        #{participantId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        #{dealTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <delete id="deleteById" parameterType="java.lang.String" >
+    delete from mn_participant
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByIds" >
+    delete from mn_participant where id in 
+    <foreach collection="list" item="id" open="(" separator="," close=")" >
+      #{id}
+    </foreach>
+  </delete>
+  <delete id="deleteByMap" >
+    delete from mn_participant mp
+    <include refid="Map_Where_Clause" />
+  </delete>
+  <update id="updateSelectiveById" parameterType="com.zte.im.mybatis.bean.MnParticipant" >
+    update mn_participant
+    <set >
+      <if test="informId != null" >
+        inform_id = #{informId,jdbcType=VARCHAR},
+      </if>
+      <if test="participantId != null" >
+        participant_id = #{participantId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        deal_time = #{dealTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateSelectiveByMap" parameterType="map" >
+    update mn_participant mp
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.informId != null" >
+        inform_id = #{record.informId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.participantId != null" >
+        participant_id = #{record.participantId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dealTime != null" >
+        deal_time = #{record.dealTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <include refid="Map_Where_Clause" />
+  </update>
+</mapper>

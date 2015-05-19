@@ -1,0 +1,17 @@
+html, body {width: 100%;height: 100%;overflow: hidden;}
+
+#structrue{position: absolute;top: 0;left: 0;width: 150px;border-right: 1px solid #e0e0e0; bottom:0;background-color: #fff;overflow-y: auto;font-size: 14px;}
+#structrue p{line-height: 45px;height: 45px;padding: 0 8px;}
+#structrue p a{color: #303030;}
+#structrue p a:hover{color: #2c5492;}
+#structrue h2{padding: 0 22px;line-height: 45px;height: 45px;font-weight: normal;}
+
+#deptTree{padding:0 8px;}
+#deptTree .button{display:none;}
+
+#middleCol{position: absolute;top: 0;left: 0;width: 150px;border-right: 1px solid #e0e0e0; bottom:0;background-color: #fff;overflow-y: auto;font-size: 14px;}
+.roleList li{text-align: center;font-size: 14px;line-height: 46px;white-space: nowrap;}
+.roleList li.selected a{color: #2c5492;}
+
+#pageMain{position: absolute;top: 0;left: 151px;right: 0;bottom: 0;background-color: #fff;}
+#pageFrame{position:absolute;bottom:0; height: 100%;width:100%;overflow: auto}

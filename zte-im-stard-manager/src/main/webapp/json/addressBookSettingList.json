@@ -1,0 +1,28 @@
+{
+    "item": [
+        {
+            "id": "minipicurl",
+            "name": "头像"
+        },
+        {
+            "id": "autograph",
+            "name": "签名"
+        },
+        {
+            "id": "mob",
+            "name": "电话"
+        },
+        {
+            "id": "email",
+            "name": "邮箱"
+        },
+        {
+            "id": "fax",
+            "name": "传真"
+        },
+        {
+            "id": "remark",
+            "name": "备注"
+        }
+    ]
+}

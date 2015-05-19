@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.my.UcTenantMapperMy">
+	<resultMap type="com.zte.im.mybatis.bean.my.UcTenantMy" id="ucTenantMyMap">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="platform_id" property="platformId" jdbcType="VARCHAR" />
+		<result column="ecid" property="ecid" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="catalog_id" property="catalogId" jdbcType="VARCHAR" />
+		<result column="max_users" property="maxUsers" jdbcType="NUMERIC" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="linkman" property="linkman" jdbcType="VARCHAR" />
+		<result column="mobile" property="mobile" jdbcType="VARCHAR" />
+		<result column="mail" property="mail" jdbcType="VARCHAR" />
+		<result column="tel" property="tel" jdbcType="VARCHAR" />
+		<result column="fax" property="fax" jdbcType="VARCHAR" />
+		<result column="org_code" property="orgCode" jdbcType="VARCHAR" />
+		<result column="license_file" property="licenseFile" jdbcType="VARCHAR" />
+		<result column="user_count" property="userCount" jdbcType="NUMERIC" />
+		<result column="audited" property="audited" jdbcType="VARCHAR" />
+		<result column="initialized" property="initialized" jdbcType="VARCHAR" />
+		<result column="usable" property="usable" jdbcType="VARCHAR" />
+		<result column="pause_time" property="pauseTime" jdbcType="DATE" />
+		<result column="is_fixed" property="isFixed" jdbcType="VARCHAR" />
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="DATE" />
+		<result column="modifier" property="modifier" jdbcType="VARCHAR" />
+		<result column="modified_time" property="modifiedTime"
+			jdbcType="DATE" />
+	</resultMap>
+
+	<select id="selectTenant" resultMap="ucTenantMyMap"
+		parameterType="string">
+		select *
+		from UC_TENANT
+		where id = #{tenantId}
+	</select>
+
+</mapper>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.my.UcMemberMapperMy">
+
+	<sql id="selectMember4Group">
+		from uc_group_member ugm
+		left join uc_member um
+		on ugm.member_id = um.id
+		left join uc_group ug
+		on ugm.group_id = ug.id
+		where um.id is not null and (ug.type_id = 'dept' or ug.type_id is null)
+		and ugm.tenant_id = #{tenantId}
+		<if test="fullId != null">
+			and ug.full_id like '${fullId}%'
+		</if>
+		<if test="keyword != null">
+			and (um.uid like '${keyword}%' or um.cn like '${keyword}%'
+			or um.pinyin like '${keyword}%' or um.t9_pinyin like '${keyword}%' or
+			um.mobile like '${keyword}%')
+		</if>
+	</sql>
+
+	<select id="getMember4Group" resultType="com.zte.im.mybatis.bean.my.UcMemberMy"
+		parameterType="map">
+		select ugm.id as deptRelationId,ug.id as deptId,ug.name as
+		deptName,um.photo_sign as photoSign, um.*
+		<include refid="selectMember4Group" />
+		<if test="sortStr != null">
+			order by ${sortStr}
+		</if>
+		limit #{pSize}
+		<if test="offset >= 0">
+			offset #{offset}
+		</if>
+	</select>
+	
+	<select id="getUcMemberById" resultType="com.zte.im.mybatis.bean.my.UcMemberMy"
+		parameterType="string">
+		select ugm.id as deptRelationId,ug.id as deptId,ug.name as
+		deptName,um.photo_sign as photoSign, 
+		um.custom_field1 as customField1,
+		um.custom_field2 as customField2,
+		um.custom_field3 as customField3,
+		um.custom_field4 as customField4,
+		um.custom_field5 as customField5,
+		um.custom_field6 as customField6,
+		um.custom_field7 as customField7,
+		um.custom_field8 as customField8,
+		um.custom_field9 as customField9,
+		um.custom_field10 as customField10,
+		um.*
+		from uc_group_member ugm
+		left join uc_member um
+		on ugm.member_id = um.id
+		left join uc_group ug
+		on ugm.group_id = ug.id
+		where um.id = #{id}
+		and (ug.type_id = 'dept' or ug.type_id is null)
+	</select>
+	
+
+	<select id="getMemberCount4Group" resultType="int"
+		parameterType="map">
+		select count(*)
+		<include refid="selectMember4Group" />
+	</select>
+
+	<select id="getRole4Member" resultType="com.zte.im.mybatis.bean.my.UcGroupRoleMy"
+		parameterType="string">
+		select ugm.id as roleRelationId,ug.* from uc_group ug
+		left join uc_group_member ugm
+		on ug.id = ugm.group_id
+		where ug.type_id =
+		'position' and ugm.member_id = #{member_id}
+	</select>
+
+	<select id="getAllUserListByTenantId" resultType="com.zte.im.mybatis.bean.my.UcMemberMy"
+		parameterType="map">
+		select um.id,um.cn,um.uid,ug.id as deptId,ug.name as deptName
+		from uc_group_member
+		ugm
+		left join uc_member um
+		on ugm.member_id = um.id
+		left join uc_group ug
+		on ugm.group_id = ug.id
+		where ug.type_id = 'dept'
+		and um.tenant_id = #{tenantId}
+		<if test="sortStr != null">
+			order by ${sortStr}
+		</if>
+	</select>
+
+
+
+
+</mapper>

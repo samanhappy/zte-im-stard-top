@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<country id="China" name="中国" en="China">
+	<area id="110000" name="北京" en="Main">
+		<city id="101010100" name="北京" en="Beijing" isHot="1" />
+	</area>
+	<area id="310000" name="上海" en="Main">
+		<city id="101020100" name="上海" en="Shanghai" isHot="1" />
+	</area>
+	<area id="120000" name="天津" en="Main">
+		<city id="101030100" name="天津" en="Tianjin" isHot="0" />
+	</area>
+	<area id="500000" name="重庆" en="Main">
+		<city id="101040100" name="重庆" en="Chongqing" isHot="1" />
+	</area>
+	<area id="810000" name="香港" en="S.A.R.">
+		<city id="101320101" name="香港" en="Hong Kong" isHot="1" />
+	</area>
+	<area id="820000" name="澳门" en="S.A.R.">
+		<city id="101330101" name="澳门" en="Macau" isHot="1" />
+	</area>
+	<!-- <area id="01" name="直辖市" en="Main"> <city id="101010100" name="北京" 
+		en="Beijing" isHot="1"/> <city id="101020100" name="上海" en="Shanghai" isHot="1"/> 
+		<city id="101030100" name="天津" en="Tianjin" isHot="0"/> <city id="101040100" 
+		name="重庆" en="Chongqing" isHot="1"/> </area> <area id="02" name="特别行政区" en="S.A.R."> 
+		<city id="101320101" name="香港" en="Hong Kong" isHot="1"/> <city id="101330101" 
+		name="澳门" en="Macau" isHot="1"/> </area> -->
+	<area id="130000" name="河北省" en="Hebei">
+		<city id="101090101" name="石家庄" en="Shijiazhuang" isHot="1" />
+		<city id="101090401" name="承德" en="Chengde" isHot="0" />
+		<city id="101090301" name="张家口" en="Zhangjiakou" isHot="0" />
+		<city id="101091101" name="秦皇岛" en="Qinhuangdao" isHot="0" />
+		<city id="101090501" name="唐山" en="Tangshan" isHot="0" />
+		<city id="101090601" name="廊坊" en="Langfang" isHot="0" />
+		<city id="101090201" name="保定" en="Baoding" isHot="0" />
+		<city id="101090701" name="沧州" en="Cangzhou" isHot="0" />
+		<city id="101090801" name="衡水" en="Hengshui" isHot="0" />
+		<city id="101090901" name="邢台" en="Xingtai" isHot="0" />
+		<city id="101091001" name="邯郸" en="Handan" isHot="0" />
+	</area>
+	<area id="140000" name="山西省" en="Shanxi">
+		<city id="101100101" name="太原" en="Taiyuan" isHot="0" />
+		<city id="101100201" name="大同" en="Datong" isHot="0" />
+		<city id="101100301" name="阳泉" en="Yangquan" isHot="0" />
+		<city id="101100501" name="长治" en="Changzhi" isHot="0" />
+		<city id="101100601" name="晋城" en="Jincheng" isHot="0" />
+		<city id="101100901" name="朔州" en="Shuozhou" isHot="0" />
+		<city id="101100401" name="晋中" en="Jinzhong" isHot="0" />
+		<city id="101100801" name="运城" en="Yuncheng" isHot="0" />
+		<city id="101101001" name="忻州" en="Xinzhou" isHot="0" />
+		<city id="101100701" name="临汾" en="Linfen" isHot="0" />
+		<city id="101101100" name="吕梁" en="Lvliang" isHot="0" />
+		<city id="101101101" name="离石" en="Lishi" isHot="0" />
+		<city id="101100402" name="榆次" en="Yuci" isHot="0" />
+	</area>
+	<area id="150000" name="内蒙古" en="Inner Mongolia">
+		<city id="101080101" name="呼和浩特" en="Huhehaote" isHot="1" />
+		<city id="101080201" name="包头" en="Baotou" isHot="0" />
+		<city id="101081000" name="呼伦贝尔" en="Hulunbeier" isHot="0" />
+		<city id="101081101" name="乌兰浩特" en="Wulanhaote" isHot="0" />
+		<city id="101080501" name="通辽" en="Tongliao" isHot="0" />
+		<city id="101080601" name="赤峰" en="Chifeng" isHot="0" />
+		<city id="101080901" name="锡林浩特" en="Xilinhaote" isHot="0" />
+		<city id="101080401" name="集宁" en="Jining" isHot="0" />
+		<city id="101080701" name="鄂尔多斯" en="Eerduosi" isHot="0" />
+		<city id="101080801" name="临河" en="Linhe" isHot="0" />
+		<city id="101080301" name="乌海" en="Wuhai" isHot="0" />
+		<city id="101081201" name="阿拉善左旗" en="Alashanzuoqi" isHot="0" />
+	</area>
+	<area id="210000" name="辽宁省" en="Liaoning">
+		<city id="101070101" name="沈阳" en="Shenyang" isHot="1" />
+		<city id="101070201" name="大连" en="Dalian" isHot="0" />
+		<city id="101070301" name="鞍山" en="Anshan" isHot="0" />
+		<city id="101070401" name="抚顺" en="Fushun" isHot="0" />
+		<city id="101070501" name="本溪" en="Benxi" isHot="0" />
+		<city id="101070601" name="丹东" en="Dandong" isHot="0" />
+		<city id="101070701" name="锦州" en="Jinzhou" isHot="0" />
+		<city id="101070801" name="营口" en="Yingkou" isHot="0" />
+		<city id="101070901" name="阜新" en="Fuxin" isHot="0" />
+		<city id="101071001" name="辽阳" en="Liaoyang" isHot="0" />
+		<city id="101071101" name="铁岭" en="Tieling" isHot="0" />
+		<city id="101071201" name="朝阳" en="Chaoyang" isHot="0" />
+		<city id="101071301" name="盘锦" en="Panjin" isHot="0" />
+		<city id="101071401" name="葫芦岛" en="Huludao" isHot="0" />
+	</area>
+	<area id="220000" name="吉林省" en="Jilin">
+		<city id="101060101" name="长春" en="Changchun" isHot="1" />
+		<city id="101060201" name="吉林" en="Jilin" isHot="0" />
+		<city id="101060401" name="四平" en="Siping" isHot="0" />
+		<city id="101060701" name="辽源" en="Liaoyuan" isHot="0" />
+		<city id="101060501" name="通化" en="Tonghua" isHot="0" />
+		<city id="101060901" name="白山" en="Baishan" isHot="0" />
+		<city id="101060801" name="松原" en="Songyuan" isHot="0" />
+		<city id="101060601" name="白城" en="Baicheng" isHot="0" />
+		<city id="101060301" name="延吉" en="Yanji" isHot="0" />
+	</area>
+	<area id="230000" name="黑龙江省" en="Heilongjiang">
+		<city id="101050101" name="哈尔滨" en="Haerbin" isHot="1" />
+		<city id="101050201" name="齐齐哈尔" en="Qiqihaer" isHot="0" />
+		<city id="101050301" name="牡丹江" en="Mudanjiang" isHot="0" />
+		<city id="101050401" name="佳木斯" en="Jiamusi" isHot="0" />
+		<city id="101050901" name="大庆" en="Daqing" isHot="0" />
+		<city id="101051101" name="鸡西" en="Jixi" isHot="0" />
+		<city id="101051301" name="双鸭山" en="Shuangyashan" isHot="0" />
+		<city id="101050801" name="伊春" en="Yichun" isHot="0" />
+		<city id="101051002" name="七台河" en="Qitaihe" isHot="0" />
+		<city id="101051201" name="鹤岗" en="Hegang" isHot="0" />
+		<city id="101050601" name="黑河" en="Heihe" isHot="0" />
+		<city id="101050501" name="绥化" en="Suihua" isHot="0" />
+		<city id="101050701" name="大兴安岭" en="Daxinganling" isHot="0" />
+	</area>
+	<area id="320000" name="江苏省" en="Jiangsu">
+		<city id="101190101" name="南京" en="Nanjing" isHot="1" />
+		<city id="101190201" name="无锡" en="Wuxi" isHot="0" />
+		<city id="101190801" name="徐州" en="Xuzhou" isHot="0" />
+		<city id="101191101" name="常州" en="Changzhou" isHot="0" />
+		<city id="101190401" name="苏州" en="Suzhou" isHot="0" />
+		<city id="101190501" name="南通" en="Nantong" isHot="0" />
+		<city id="101191001" name="连云港" en="Lianyungang" isHot="0" />
+		<city id="101190901" name="淮安" en="Huaian" isHot="0" />
+		<city id="101190701" name="盐城" en="Yancheng" isHot="0" />
+		<city id="101190601" name="扬州" en="Yangzhou" isHot="0" />
+		<city id="101190301" name="镇江" en="Zhenjiang" isHot="0" />
+		<city id="101191201" name="泰州" en="Taizhou" isHot="0" />
+		<city id="101191301" name="宿迁" en="Suqian" isHot="0" />
+		<city id="101190403" name="张家港" en="Zhangjiagang" isHot="0" />
+	</area>
+	<area id="330000" name="浙江省" en="Zhejiang">
+		<city id="101210101" name="杭州" en="Hangzhou" isHot="1" />
+		<city id="101210401" name="宁波" en="Ningbo" isHot="0" />
+		<city id="101210701" name="温州" en="Wenzhou" isHot="0" />
+		<city id="101210301" name="嘉兴" en="Jiaxing" isHot="0" />
+		<city id="101210201" name="湖州" en="Huzhou" isHot="0" />
+		<city id="101210501" name="绍兴" en="Shaoxing" isHot="0" />
+		<city id="101210503" name="上虞" en="Shangyu" isHot="0" />
+		<city id="101210901" name="金华" en="Jinhua" isHot="0" />
+		<city id="101210904" name="义乌" en="Yiwu" isHot="0" />
+		<city id="101211001" name="衢州" en="Quzhou" isHot="0" />
+		<city id="101211101" name="舟山" en="Zhoushan" isHot="0" />
+		<city id="101210601" name="台州" en="Taizhou" isHot="0" />
+		<city id="101210801" name="丽水" en="Lishui" isHot="0" />
+		<city id="101210802" name="遂昌" en="Suichang" isHot="0" />
+		<city id="101210403" name="慈溪" en="Cixi" isHot="0" />
+		<city id="101210103" name="桐庐" en="Tonglu" isHot="0" />
+		<city id="101210607" name="温岭" en="Wenling" isHot="0" />
+	</area>
+	<area id="340000" name="安徽省" en="Anhui">
+		<city id="101220101" name="合肥" en="Hefei" isHot="1" />
+		<city id="101220901" name="亳州" en="Bozhou" isHot="0" />
+		<city id="101221201" name="淮北" en="Huaibei" isHot="0" />
+		<city id="101220701" name="宿州" en="Suzhou" isHot="0" />
+		<city id="101220801" name="阜阳" en="Fuyang" isHot="0" />
+		<city id="101220201" name="蚌埠" en="Bengbu" isHot="0" />
+		<city id="101220401" name="淮南" en="Huainan" isHot="0" />
+		<city id="101221101" name="滁州" en="Chuzhou" isHot="0" />
+		<city id="101221501" name="六安" en="Luan" isHot="0" />
+		<city id="101221601" name="巢湖" en="Chaohu" isHot="0" />
+		<city id="101220301" name="芜湖" en="Wuhu" isHot="0" />
+		<city id="101220501" name="马鞍山" en="Maanshan" isHot="0" />
+		<city id="101220601" name="安庆" en="Anqing" isHot="0" />
+		<city id="101221701" name="池州" en="Chizhou" isHot="0" />
+		<city id="101221301" name="铜陵" en="Tongling" isHot="0" />
+		<city id="101221401" name="宣城" en="Xuancheng" isHot="0" />
+		<city id="101221001" name="黄山" en="Huangshan" isHot="0" />
+		<city id="101221008" name="黄山景区" en="Huangshan Mt." isHot="0" />
+	</area>
+	<area id="350000" name="福建省" en="Fujian">
+		<city id="101230101" name="福州" en="Fuzhou" isHot="1" />
+		<city id="101230201" name="厦门" en="Xiamen" isHot="0" />
+		<city id="101230401" name="莆田" en="Putian" isHot="0" />
+		<city id="101230801" name="三明" en="Sanming" isHot="0" />
+		<city id="101230501" name="泉州" en="Quanzhou" isHot="0" />
+		<city id="101230601" name="漳州" en="Zhangzhou" isHot="0" />
+		<city id="101230901" name="南平" en="Nanping" isHot="0" />
+		<city id="101230905" name="武夷山" en="Wuyishan" isHot="0" />
+		<city id="101230701" name="龙岩" en="Longyan" isHot="0" />
+		<city id="101230301" name="宁德" en="Ningde" isHot="0" />
+		<city id="101230308" name="福鼎" en="Fuding" isHot="0" />
+	</area>
+	<area id="360000" name="江西省" en="Jiangxi">
+		<city id="101240101" name="南昌" en="Nanchang" isHot="1" />
+		<city id="101240201" name="九江" en="Jiujiang" isHot="0" />
+		<city id="101240801" name="景德镇" en="Jingdezhen" isHot="0" />
+		<city id="101240901" name="萍乡" en="Pingxiang" isHot="0" />
+		<city id="101241001" name="新余" en="Xinyu" isHot="0" />
+		<city id="101241101" name="鹰潭" en="Yingtan" isHot="0" />
+		<city id="101240701" name="赣州" en="Ganzhou" isHot="0" />
+		<city id="101240501" name="宜春" en="Yichun" isHot="0" />
+		<city id="101240301" name="上饶" en="Shangrao" isHot="0" />
+		<city id="101240601" name="吉安" en="Jian" isHot="0" />
+		<city id="101240608" name="井冈山" en="Jinggangshan" isHot="0" />
+		<city id="101240401" name="抚州" en="Fuzhou" isHot="0" />
+	</area>
+	<area id="370000" name="山东省" en="Shandong">
+		<city id="101120101" name="济南" en="Jinan" isHot="1" />
+		<city id="101120201" name="青岛" en="Qingdao" isHot="0" />
+		<city id="101120301" name="淄博" en="Zibo" isHot="0" />
+		<city id="101121401" name="枣庄" en="Zaozhuang" isHot="0" />
+		<city id="101121201" name="东营" en="Dongying" isHot="0" />
+		<city id="101120501" name="烟台" en="Yantai" isHot="0" />
+		<city id="101120601" name="潍坊" en="Weifang" isHot="0" />
+		<city id="101120603" name="寿光" en="Shouguang" isHot="0" />
+		<city id="101120609" name="诸城" en="Zhucheng" isHot="0" />
+		<city id="101120701" name="济宁" en="Jining" isHot="0" />
+		<city id="101120711" name="邹城" en="Zoucheng" isHot="0" />
+		<city id="101120801" name="泰安" en="Taian" isHot="0" />
+		<city id="101120802" name="新泰" en="Xintai" isHot="0" />
+		<city id="101121301" name="威海" en="Weihai" isHot="0" />
+		<city id="101121501" name="日照" en="Rizhao" isHot="0" />
+		<city id="101121601" name="莱芜" en="Laiwu" isHot="0" />
+		<city id="101120901" name="临沂" en="Linyi" isHot="0" />
+		<city id="101120401" name="德州" en="Dezhou" isHot="0" />
+		<city id="101121701" name="聊城" en="Liaocheng" isHot="0" />
+		<city id="101121101" name="滨州" en="Binzhou" isHot="0" />
+		<city id="101121001" name="菏泽" en="Heze" isHot="0" />
+		<city id="101120106" name="济阳" en="Jiyang" isHot="0" />
+		<city id="101120208" name="平度" en="Pingdu" isHot="0" />
+	</area>
+	<area id="410000" name="河南省" en="Henan">
+		<city id="101180101" name="郑州" en="Zhengzhou" isHot="1" />
+		<city id="101180801" name="开封" en="Kaifeng" isHot="0" />
+		<city id="101180901" name="洛阳" en="Luoyang" isHot="0" />
+		<city id="101180502" name="平顶山" en="Pingdingshan" isHot="0" />
+		<city id="101180201" name="安阳" en="Anyang" isHot="0" />
+		<city id="101181101" name="焦作" en="Jiaozuo" isHot="0" />
+		<city id="101181201" name="鹤壁" en="Hebi" isHot="0" />
+		<city id="101180301" name="新乡" en="Xinxiang" isHot="0" />
+		<city id="101181301" name="濮阳" en="Puyang" isHot="0" />
+		<city id="101180401" name="许昌" en="Xuchang" isHot="0" />
+		<city id="101181501" name="漯河" en="Luohe" isHot="0" />
+		<city id="101181701" name="三门峡" en="Sanmenxia" isHot="0" />
+		<city id="101180701" name="南阳" en="Nanyang" isHot="0" />
+		<city id="101181001" name="商丘" en="Shangqiu" isHot="0" />
+		<city id="101180601" name="信阳" en="Xinyang" isHot="0" />
+		<city id="101181401" name="周口" en="Zhoukou" isHot="0" />
+		<city id="101181601" name="驻马店" en="Zhumadian" isHot="0" />
+		<city id="101181801" name="济源" en="Jiyuan" isHot="0" />
+		<city id="101181009" name="永城" en="Yongcheng" isHot="0" />
+	</area>
+	<area id="420000" name="湖北省" en="Hubei">
+		<city id="101200101" name="武汉" en="Wuhan" isHot="1" />
+		<city id="101200601" name="黄石" en="Huangshi" isHot="0" />
+		<city id="101200201" name="襄樊" en="Xiangfan" isHot="0" />
+		<city id="101200801" name="荆州" en="Jingzhou" isHot="0" />
+		<city id="101200901" name="宜昌" en="Yichang" isHot="0" />
+		<city id="101200501" name="黄冈" en="Huanggang" isHot="0" />
+		<city id="101200301" name="鄂州" en="Ezhou" isHot="0" />
+		<city id="101201101" name="十堰" en="Shiyan" isHot="0" />
+		<city id="101200401" name="孝感" en="Xiaogan" isHot="0" />
+		<city id="101201401" name="荆门" en="Jingmen" isHot="0" />
+		<city id="101200701" name="咸宁" en="Xianning" isHot="0" />
+		<city id="101201301" name="随州" en="Suizhou" isHot="0" />
+		<city id="101201001" name="恩施" en="Enshi" isHot="0" />
+		<city id="101201501" name="天门" en="Tianmen" isHot="0" />
+		<city id="101201601" name="仙桃" en="Xiantao" isHot="0" />
+		<city id="101200405" name="应城" en="Yingcheng" isHot="0" />
+	</area>
+	<area id="430000" name="湖南省" en="Hunan">
+		<city id="101250101" name="长沙" en="Changsha" isHot="1" />
+		<city id="101250301" name="株洲" en="Zhuzhou" isHot="0" />
+		<city id="101250201" name="湘潭" en="Xiangtan" isHot="0" />
+		<city id="101250401" name="衡阳" en="Hengyang" isHot="0" />
+		<city id="101250409" name="南岳" en="Nanyue" isHot="0" />
+		<city id="101250901" name="邵阳" en="Shaoyang" isHot="0" />
+		<city id="101251001" name="岳阳" en="Yueyang" isHot="0" />
+		<city id="101250601" name="常德" en="Changde" isHot="0" />
+		<city id="101251101" name="张家界" en="Zhangjiajie" isHot="0" />
+		<city id="101250700" name="益阳" en="Yiyang" isHot="0" />
+		<city id="101250501" name="郴州" en="Chenzhou" isHot="0" />
+		<city id="101251401" name="永州" en="Yongzhou" isHot="0" />
+		<city id="101251201" name="怀化" en="Huaihua" isHot="0" />
+		<city id="101250801" name="娄底" en="Loudi" isHot="0" />
+		<city id="101251501" name="吉首" en="Jishou" isHot="0" />
+		<city id="101251301" name="黔阳" en="Qianyang" isHot="0" />
+	</area>
+	<area id="440000" name="广东省" en="Guangdong">
+		<city id="101280101" name="广州" en="Guangzhou" isHot="1" />
+		<city id="101280601" name="深圳" en="Shenzhen" isHot="1" />
+		<city id="101280701" name="珠海" en="Zhuhai" isHot="0" />
+		<city id="101280501" name="汕头" en="Shantou" isHot="0" />
+		<city id="101280800" name="佛山" en="Foshan" isHot="0" />
+		<city id="101280201" name="韶关" en="Shaoguan" isHot="0" />
+		<city id="101281201" name="河源" en="Heyuan" isHot="0" />
+		<city id="101280401" name="梅州" en="Meizhou" isHot="0" />
+		<city id="101280301" name="惠州" en="Huizhou" isHot="0" />
+		<city id="101282101" name="汕尾" en="Shanwei" isHot="0" />
+		<city id="101281601" name="东莞" en="Dongguan" isHot="0" />
+		<city id="101281701" name="中山" en="Zhongshan" isHot="0" />
+		<city id="101281101" name="江门" en="Jiangmen" isHot="0" />
+		<city id="101281103" name="开平" en="Kaiping" isHot="0" />
+		<city id="101281801" name="阳江" en="Yangjiang" isHot="0" />
+		<city id="101281001" name="湛江" en="Zhangjiang" isHot="0" />
+		<city id="101282001" name="茂名" en="Maoming" isHot="0" />
+		<city id="101280901" name="肇庆" en="Zhaoqing" isHot="0" />
+		<city id="101281301" name="清远" en="Qingyuan" isHot="0" />
+		<city id="101281501" name="潮州" en="Chaozhou" isHot="0" />
+		<city id="101281901" name="揭阳" en="Jieyang" isHot="0" />
+		<city id="101281401" name="云浮" en="Yunfu" isHot="0" />
+	</area>
+	<area id="450000" name="广西" en="Guangxi">
+		<city id="101300101" name="南宁" en="Nanning" isHot="0" />
+		<city id="101300301" name="柳州" en="Liuzhou" isHot="0" />
+		<city id="101300501" name="桂林" en="Guilin" isHot="0" />
+		<city id="101300601" name="梧州" en="Wuzhou" isHot="0" />
+		<city id="101301301" name="北海" en="Beihai" isHot="0" />
+		<city id="101301401" name="防城港" en="Fangchenggang" isHot="0" />
+		<city id="101301101" name="钦州" en="Qinzhou" isHot="0" />
+		<city id="101300801" name="贵港" en="Guigang" isHot="0" />
+		<city id="101300901" name="玉林" en="Yulin" isHot="0" />
+		<city id="101301001" name="百色" en="Baise" isHot="0" />
+		<city id="101300701" name="贺州" en="Hezhou" isHot="0" />
+		<city id="101301201" name="河池" en="Hechi" isHot="0" />
+		<city id="101300401" name="来宾" en="Laibin" isHot="0" />
+		<city id="101300201" name="崇左" en="Chongzuo" isHot="0" />
+	</area>
+	<area id="460000" name="海南省" en="Hainan">
+		<city id="101310101" name="海口" en="Haikou" isHot="1" />
+		<city id="101310201" name="三亚" en="Sanya" isHot="1" />
+		<city id="101310211" name="琼海" en="Qionghai" isHot="0" />
+		<city id="101310204" name="澄迈" en="Chengmai" isHot="0" />
+		<city id="101310214" name="保亭" en="Baoting" isHot="0" />
+		<city id="101310203" name="临高" en="Lingao" isHot="0" />
+		<city id="101310210" name="屯昌" en="Tunchang" isHot="0" />
+		<city id="101310216" name="陵水" en="Lingshui" isHot="0" />
+		<city id="101310207" name="白沙" en="Baisha" isHot="0" />
+		<city id="101310222" name="五指山" en="Wuzhishan" isHot="0" />
+		<city id="101310221" name="乐东" en="Ledong" isHot="0" />
+		<city id="101310209" name="定安" en="Dingan" isHot="0" />
+		<city id="101310202" name="东方" en="Dongfang" isHot="0" />
+		<city id="101310206" name="昌江" en="Changjiang" isHot="0" />
+		<city id="101310205" name="儋州" en="Danzhou" isHot="0" />
+		<city id="101310215" name="万宁" en="Wanning" isHot="0" />
+		<city id="101310212" name="文昌" en="Wenchang" isHot="0" />
+		<city id="101310208" name="琼中" en="Qiongzhong" isHot="0" />
+		<city id="101310217" name="西沙" en="Xisha" isHot="0" />
+		<city id="101310220" name="南沙" en="Nansha" isHot="0" />
+	</area>
+	<area id="510000" name="四川省" en="Sichuan">
+		<city id="101270101" name="成都" en="Chengdu" isHot="1" />
+		<city id="101270301" name="自贡" en="Zigong" isHot="0" />
+		<city id="101270201" name="攀枝花" en="Panzhihua" isHot="0" />
+		<city id="101271001" name="泸州" en="Luzhou" isHot="0" />
+		<city id="101272001" name="德阳" en="Deyang" isHot="0" />
+		<city id="101270401" name="绵阳" en="Mianyang" isHot="0" />
+		<city id="101272101" name="广元" en="Guangyuan" isHot="0" />
+		<city id="101270701" name="遂宁" en="Suining" isHot="0" />
+		<city id="101271201" name="内江" en="Neijiang" isHot="0" />
+		<city id="101271401" name="乐山" en="Leshan" isHot="0" />
+		<city id="101270501" name="南充" en="Nanchong" isHot="0" />
+		<city id="101271101" name="宜宾" en="Yibin" isHot="0" />
+		<city id="101270801" name="广安" en="Guangan" isHot="0" />
+		<city id="101270601" name="达州" en="Dazhou" isHot="0" />
+		<city id="101270901" name="巴中" en="Bazhong" isHot="0" />
+		<city id="101271701" name="雅安" en="Yaan" isHot="0" />
+		<city id="101271501" name="眉山" en="Meishan" isHot="0" />
+		<city id="101271301" name="资阳" en="Ziyang" isHot="0" />
+		<city id="101271304" name="简阳" en="Jianyang" isHot="0" />
+		<city id="101271901" name="阿坝" en="Aba" isHot="0" />
+		<city id="101271906" name="九寨沟" en="Jiuzhaigou" isHot="0" />
+		<city id="101271801" name="甘孜" en="Ganzi" isHot="0" />
+		<city id="101271601" name="凉山" en="Liangshan" isHot="0" />
+		<city id="101271409" name="峨眉山" en="Emeishan" isHot="0" />
+		<city id="101043400" name="酉阳" en="Youyang" isHot="0" />
+	</area>
+	<area id="520000" name="贵州省" en="Guizhou">
+		<city id="101260101" name="贵阳" en="Guiyang" isHot="1" />
+		<city id="101260801" name="六盘水" en="Liupanshui" isHot="0" />
+		<city id="101260201" name="遵义" en="Zunyi" isHot="0" />
+		<city id="101260301" name="安顺" en="Anshun" isHot="0" />
+		<city id="101260601" name="铜仁" en="Tongren" isHot="0" />
+		<city id="101260701" name="毕节" en="Bijie" isHot="0" />
+		<city id="101260902" name="晴隆" en="Qinglong" isHot="0" />
+		<city id="101260401" name="都匀" en="Duyun" isHot="0" />
+		<city id="101260501" name="凯里" en="Kaili" isHot="0" />
+		<city id="101260515" name="锦屏" en="Jinping" isHot="0" />
+		<city id="101260901" name="兴义" en="Xingyi" isHot="0" />
+	</area>
+	<area id="530000" name="云南省" en="Yunnan">
+		<city id="101290101" name="昆明" en="Kunming" isHot="1" />
+		<city id="101290401" name="曲靖" en="Qujing" isHot="0" />
+		<city id="101290701" name="玉溪" en="Yuxi" isHot="0" />
+		<city id="101291001" name="昭通" en="Zhaotong" isHot="0" />
+		<city id="101290801" name="楚雄" en="Chuxiong" isHot="0" />
+		<city id="101290301" name="红河" en="Honghe" isHot="0" />
+		<city id="101291401" name="丽江" en="Lijiang" isHot="0" />
+		<city id="101291601" name="西双版纳" en="Sipsong Panna" isHot="0" />
+		<city id="101291301" name="香格里拉" en="Xianggelila" isHot="0" />
+		<city id="101290601" name="文山" en="Wenshan" isHot="0" />
+		<city id="101290201" name="大理" en="Dali" isHot="0" />
+		<city id="101290501" name="保山" en="Baoshan" isHot="0" />
+		<city id="101291101" name="临沧" en="Lincang" isHot="0" />
+		<city id="101290901" name="普洱" en="Puer" isHot="0" />
+		<city id="101291004" name="镇雄" en="Zhenxiong" isHot="0" />
+	</area>
+	<area id="540000" name="西藏" en="Tibet">
+		<city id="101140101" name="拉萨" en="Lhasa" isHot="1" />
+		<!-- <city id="" name="昌都" en="Changdu" isHot="0"/> -->
+		<city id="101140201" name="日喀则" en="ShiGaTse" isHot="0" />
+		<city id="101140601" name="那曲" en="Naqu" isHot="0" />
+		<!-- <city id="" name="林芝" en="Linzhi" isHot="0"/> -->
+	</area>
+	<area id="610000" name="陕西省" en="Shaanxi">
+		<city id="101110101" name="西安" en="Xian" isHot="1" />
+		<city id="101110200" name="咸阳" en="Xianyang" isHot="0" />
+		<city id="101110901" name="宝鸡" en="Baoji" isHot="0" />
+		<city id="101110501" name="渭南" en="Weinan" isHot="0" />
+		<city id="101111001" name="铜川" en="Tongchuan" isHot="0" />
+		<city id="101110601" name="商洛" en="Shangluo" isHot="0" />
+		<city id="101110300" name="延安" en="Yanan" isHot="0" />
+		<city id="101110801" name="汉中" en="Hanzhong" isHot="0" />
+		<city id="101110701" name="安康" en="Ankang" isHot="0" />
+		<city id="101110401" name="榆林" en="Yulin" isHot="0" />
+	</area>
+	<area id="620000" name="甘肃省" en="Gansu">
+		<city id="101160101" name="兰州" en="Lanzhou" isHot="1" />
+		<city id="101160601" name="金昌" en="Jinchang" isHot="0" />
+		<city id="101161301" name="白银" en="Baiying" isHot="0" />
+		<city id="101160901" name="天水" en="Tianshui" isHot="0" />
+		<city id="101160501" name="武威" en="Wuwei" isHot="0" />
+		<city id="101160701" name="张掖" en="Zhangye" isHot="0" />
+		<city id="101160801" name="酒泉" en="Jiuquan" isHot="0" />
+		<city id="101160301" name="平凉" en="Pingliang" isHot="0" />
+		<city id="101160401" name="庆阳" en="Qingyang" isHot="0" />
+		<city id="101160201" name="定西" en="Dingxi" isHot="0" />
+		<city id="101161101" name="临夏" en="Linxia" isHot="0" />
+		<city id="101161401" name="嘉峪关" en="Jiayuguan" isHot="0" />
+	</area>
+	<area id="630000" name="青海省" en="Qinghai">
+		<city id="101150101" name="西宁" en="Xining" isHot="0" />
+		<city id="101150702" name="格尔木" en="Geermu" isHot="0" />
+		<city id="101150601" name="玉树" en="Yushu" isHot="0" />
+	</area>
+	<area id="640000" name="宁夏" en="Ningxia">
+		<city id="101170101" name="银川" en="Yinchuan" isHot="0" />
+		<city id="101170201" name="石嘴山" en="Shizuishan" isHot="0" />
+		<city id="101170401" name="固原" en="Guyuan" isHot="0" />
+		<city id="101170301" name="吴忠" en="Wuzhong" isHot="0" />
+		<city id="101170501" name="中卫" en="Zhongwei" isHot="0" />
+	</area>
+	<area id="650000" name="新疆" en="Xinjiang">
+		<city id="101130101" name="乌鲁木齐" en="Wulumuqi" isHot="1" />
+		<city id="101130201" name="克拉玛依" en="Karamay" isHot="0" />
+		<city id="101130501" name="吐鲁番" en="Turpan" isHot="0" />
+		<city id="101131201" name="哈密" en="Hami" isHot="0" />
+		<city id="101131301" name="和田" en="Hotan" isHot="0" />
+		<city id="101130801" name="阿克苏" en="Aksu" isHot="0" />
+		<city id="101130901" name="喀什" en="Kashi" isHot="0" />
+		<city id="101130601" name="库尔勒" en="Kuerle" isHot="0" />
+		<city id="101130401" name="昌吉" en="Changji" isHot="0" />
+		<city id="101131601" name="博乐" en="Bole" isHot="0" />
+		<city id="101131101" name="塔城" en="Tacheng" isHot="0" />
+		<city id="101131401" name="阿勒泰" en="Altay" isHot="0" />
+		<city id="101130301" name="石河子" en="Shihezi" isHot="0" />
+		<city id="101131001" name="伊宁" en="Yining" isHot="0" />
+		<city id="101131011" name="奎屯" en="Kuitun" isHot="0" />
+		<city id="101131501" name="阿图什" en="Artux" isHot="0" />
+		<city id="101131502" name="乌恰" en="Wuqia" isHot="0" />
+		<city id="101131503" name="阿克陶" en="Aketao" isHot="0" />
+		<city id="101131504" name="阿合奇" en="Aheqi" isHot="0" />
+	</area>
+	<area id="710000" name="台湾" en="Taiwan">
+		<city id="101340101" name="台北" en="Taipei" isHot="1" />
+		<city id="101340201" name="高雄" en="Kaohsiung" isHot="0" />
+		<city id="101340401" name="台中" en="Taichung" isHot="0" />
+		<city id="101340203" name="台南" en="Tainan" isHot="0" />
+		<city id="101340204" name="台东" en="Taitung" isHot="0" />
+		<city id="TWXX0003" name="基隆" en="Chilung" isHot="0" />
+		<city id="101340405" name="花莲" en="Hualien" isHot="0" />
+		<city id="101340103" name="新竹" en="Hsinchu" isHot="0" />
+		<city id="101340202" name="嘉义" en="Chiayi" isHot="0" />
+	</area>
+</country>

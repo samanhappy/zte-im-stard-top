@@ -1,0 +1,31 @@
+{
+    "data": {
+        "clientList": [
+            {
+                "iconUrl": "../../../appPic/1.png",
+                "id": "d5befd5d-c6e0-48a5-a4f9-b5a746f6f624",
+                "name": "MOA",
+                "os": "android",
+                "version": "2.3.91",
+                "isActive": "off",
+                "apkUrl": "http://58.213.28.162:8088/group1/M00/00/01/wKgNyFR50SmAY-6TAOxgkq55t6s475.apk?attname=MOA.apk"
+            },{
+                "iconUrl": "../../../appPic/2.png",
+                "id": "f92078b2-0274-4f3f-b0aa-609255eb0f69",
+                "name": "WiFi网络电话",
+                "os": "android",
+                "version": "1.0.2",
+                "isActive": "on",
+                "apkUrl": "http://58.213.28.162:8088/group1/M00/00/01/wKgNyFR50SmAY-6TAOxgkq55t6s475.apk?attname=MOA.apk"
+            },{
+                "iconUrl": "../../../appPic/3.png",
+                "id": "d5befd5d-c6e0-48a5-a4f9-b5a746f6f624",
+                "name": "MOA",
+                "os": "android",
+                "version": "2.3.91",
+                "isActive": "off",
+                "apkUrl": "http://58.213.28.162:8088/group1/M00/00/01/wKgNyFR50SmAY-6TAOxgkq55t6s475.apk?attname=MOA.apk"
+            }
+        ]
+    }
+}

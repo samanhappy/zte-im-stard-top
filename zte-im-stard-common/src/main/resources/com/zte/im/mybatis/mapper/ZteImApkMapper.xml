@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.ZteImApkMapper" >
+  <resultMap id="BaseResultMap" type="com.zte.im.mybatis.bean.ZteImApk" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="CATE_ID" property="cateId" jdbcType="INTEGER" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="IMG" property="img" jdbcType="VARCHAR" />
+    <result column="APK_URL" property="apkUrl" jdbcType="VARCHAR" />
+    <result column="IS_ENABLE" property="isEnable" jdbcType="INTEGER" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="USER_ID" property="userId" jdbcType="INTEGER" />
+    <result column="BANNER" property="banner" jdbcType="VARCHAR" />
+    <result column="IS_CHOICE" property="isChoice" jdbcType="INTEGER" />
+    <result column="IS_RECOMMEND" property="isRecommend" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    ID, CATE_ID, NAME, IMG, APK_URL, IS_ENABLE, UPDATE_TIME, USER_ID, BANNER, IS_CHOICE, 
+    IS_RECOMMEND
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zte.im.mybatis.bean.ZteImApkExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from "zte_im_apk"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from "zte_im_apk"
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from "zte_im_apk"
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.zte.im.mybatis.bean.ZteImApkExample" >
+    delete from "zte_im_apk"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.zte.im.mybatis.bean.ZteImApk" >
+    insert into "zte_im_apk" (ID, CATE_ID, NAME, 
+      IMG, APK_URL, IS_ENABLE, 
+      UPDATE_TIME, USER_ID, BANNER, 
+      IS_CHOICE, IS_RECOMMEND)
+    values (#{id,jdbcType=INTEGER}, #{cateId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{img,jdbcType=VARCHAR}, #{apkUrl,jdbcType=VARCHAR}, #{isEnable,jdbcType=INTEGER}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{userId,jdbcType=INTEGER}, #{banner,jdbcType=VARCHAR}, 
+      #{isChoice,jdbcType=INTEGER}, #{isRecommend,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zte.im.mybatis.bean.ZteImApk" >
+    insert into "zte_im_apk"
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="cateId != null" >
+        CATE_ID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="img != null" >
+        IMG,
+      </if>
+      <if test="apkUrl != null" >
+        APK_URL,
+      </if>
+      <if test="isEnable != null" >
+        IS_ENABLE,
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME,
+      </if>
+      <if test="userId != null" >
+        USER_ID,
+      </if>
+      <if test="banner != null" >
+        BANNER,
+      </if>
+      <if test="isChoice != null" >
+        IS_CHOICE,
+      </if>
+      <if test="isRecommend != null" >
+        IS_RECOMMEND,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cateId != null" >
+        #{cateId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="apkUrl != null" >
+        #{apkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isEnable != null" >
+        #{isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="banner != null" >
+        #{banner,jdbcType=VARCHAR},
+      </if>
+      <if test="isChoice != null" >
+        #{isChoice,jdbcType=INTEGER},
+      </if>
+      <if test="isRecommend != null" >
+        #{isRecommend,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.zte.im.mybatis.bean.ZteImApkExample" resultType="java.lang.Integer" >
+    select count(*) from "zte_im_apk"
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update "zte_im_apk"
+    <set >
+      <if test="record.id != null" >
+        ID = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.cateId != null" >
+        CATE_ID = #{record.cateId,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        NAME = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.img != null" >
+        IMG = #{record.img,jdbcType=VARCHAR},
+      </if>
+      <if test="record.apkUrl != null" >
+        APK_URL = #{record.apkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isEnable != null" >
+        IS_ENABLE = #{record.isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="record.updateTime != null" >
+        UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.userId != null" >
+        USER_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.banner != null" >
+        BANNER = #{record.banner,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isChoice != null" >
+        IS_CHOICE = #{record.isChoice,jdbcType=INTEGER},
+      </if>
+      <if test="record.isRecommend != null" >
+        IS_RECOMMEND = #{record.isRecommend,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update "zte_im_apk"
+    set ID = #{record.id,jdbcType=INTEGER},
+      CATE_ID = #{record.cateId,jdbcType=INTEGER},
+      NAME = #{record.name,jdbcType=VARCHAR},
+      IMG = #{record.img,jdbcType=VARCHAR},
+      APK_URL = #{record.apkUrl,jdbcType=VARCHAR},
+      IS_ENABLE = #{record.isEnable,jdbcType=INTEGER},
+      UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      USER_ID = #{record.userId,jdbcType=INTEGER},
+      BANNER = #{record.banner,jdbcType=VARCHAR},
+      IS_CHOICE = #{record.isChoice,jdbcType=INTEGER},
+      IS_RECOMMEND = #{record.isRecommend,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zte.im.mybatis.bean.ZteImApk" >
+    update "zte_im_apk"
+    <set >
+      <if test="cateId != null" >
+        CATE_ID = #{cateId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        IMG = #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="apkUrl != null" >
+        APK_URL = #{apkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isEnable != null" >
+        IS_ENABLE = #{isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        USER_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="banner != null" >
+        BANNER = #{banner,jdbcType=VARCHAR},
+      </if>
+      <if test="isChoice != null" >
+        IS_CHOICE = #{isChoice,jdbcType=INTEGER},
+      </if>
+      <if test="isRecommend != null" >
+        IS_RECOMMEND = #{isRecommend,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zte.im.mybatis.bean.ZteImApk" >
+    update "zte_im_apk"
+    set CATE_ID = #{cateId,jdbcType=INTEGER},
+      NAME = #{name,jdbcType=VARCHAR},
+      IMG = #{img,jdbcType=VARCHAR},
+      APK_URL = #{apkUrl,jdbcType=VARCHAR},
+      IS_ENABLE = #{isEnable,jdbcType=INTEGER},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      USER_ID = #{userId,jdbcType=INTEGER},
+      BANNER = #{banner,jdbcType=VARCHAR},
+      IS_CHOICE = #{isChoice,jdbcType=INTEGER},
+      IS_RECOMMEND = #{isRecommend,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

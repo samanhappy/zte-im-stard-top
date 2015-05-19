@@ -1,0 +1,28 @@
+html, body {width: 100%;height: 100%;overflow: hidden;}
+.loginbg {position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index:10;}
+body{background: url(../images/loginBg.png) no-repeat;background-size:100% 100%;}
+
+.loginWrap{position: absolute;left: 100px;top:0;width: 240px; color: #fff;z-index:100;}
+.loginWrap h1{height:48px;width:240px;margin:80px 0 90px 0;}
+.loginBd{padding-left:3px;}
+.loginBd .userName,
+.loginBd .userPwd,
+.loginBd .userMail{background:url(../images/loginInputBg.png);width:214px;height:20px;padding:8px;margin-bottom:10px;border:1px solid #b0b8cb;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+
+.loginBd .userName input,
+.loginBd .userPwd input,
+.loginBd .userMail input{background:none;border:none;height:20px;line-height:20px;width:214px;font-size:16px;color:#e0dfdf;}
+
+.loginBd .loginTipMsg{height: 42px;text-align:center;padding-top:8px;font-size: 16px;}
+.loginBd .errMsg{color: #6e87ab;}
+.loginBd .correctMsg{color: #6e87ab;}
+
+.loginBd .loginBtn{background:url(../images/loginBtnBg.png);width:230px;height:36px;border:1px solid #edeef2;color:#6186b0;font-size:17px;cursor:pointer;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.loginBd .loginBtn:hover{color: #2c5492;}
+.loginLinks{padding-top:8px;font-size:12px;color:#6186b0;}
+.loginBd .forget{color: #6186b0;padding-top:3px;}
+.loginBd .forget:hover{color: #2c5492;}
+.loginBd .back{float:left;display: inline-block;width: 108px;text-align: center;height:30px;line-height: 30px;background:url(../images/loginBtnBg.png);border:1px solid #edeef2;color:#6186b0; font-size: 17px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.loginBd .back:hover{color: #2c5492;}
+.loginBd .confirmBtn{float:right;background:url(../images/loginBtnBg.png);width:108px;height:32px;line-height: 32px;border:1px solid #edeef2;color:#6186b0;font-size:17px;cursor:pointer;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.loginBd .confirmBtn:hover{color: #2c5492;}

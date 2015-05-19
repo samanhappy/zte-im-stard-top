@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zte.im.mybatis.mapper.MnInformByMapMapper" >
+  <resultMap id="BaseResultMap" type="com.zte.im.mybatis.bean.MnInformByMap" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="refused" property="refused" jdbcType="BIGINT" />
+  	<result column="accepted" property="accepted" jdbcType="BIGINT" />
+  	<result column="deal_status" property="dealStatus" jdbcType="VARCHAR" />
+  	<result column="waitted" property="waitted" jdbcType="BIGINT" />
+  </resultMap>
+
+  <select id="selectByMap" resultMap="BaseResultMap" parameterType="map" >
+  	select * from (
+		select inf.*, 
+		
+		(
+			select count(1) from mn_participant  
+			where inform_id=inf.id and status='a'
+		) as accepted , 
+		
+		(
+			select count(*) from mn_participant  
+			where inform_id=inf.id and status='r'
+		) as refused,
+		
+		(
+	      select count(*) from mn_participant  
+	      where 
+	     inform_id=inf.id and status is null
+
+        ) as waitted 
+		
+		
+	 from mn_inform inf 
+	 
+	 where (
+		creator = #{userId} 
+		or 
+		exists  (select 1 from mn_participant where participant_id= #{userId} and mn_participant.inform_id=inf.id)
+		)
+		<if test="null != informId" >
+            and inf.id = #{informId}
+        </if>
+		order by create_time desc
+	) as result 
+		
+	limit #{limit} offset #{offset}
+  </select>
+  
+  <select id="countByMap" resultType="java.lang.Integer" parameterType="String" >
+	select count(1)
+	from mn_inform inf 
+	where (
+	creator = #{userId}
+	or 
+	exists  (select 1 from mn_participant where participant_id=#{userId} and mn_participant.inform_id=inf.id)
+	)
+    <if test="null != informId" >
+        and inf.id = #{informId}
+    </if>
+  </select>
+</mapper>

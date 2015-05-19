@@ -1,0 +1,9 @@
+.Wdate{
+	background:#fff url(datepick.png) no-repeat right;
+	width: 100px;
+}
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}

@@ -1,0 +1,38 @@
+html, body {width: 100%;height: 100%;overflow: hidden;}
+
+/*头部*/
+#header{position: absolute;top: 0;left: 0;right: 0; height: 60px;background-color: #6186b0;color: #fff;}
+.logo{padding: 13px 0 0 29px; height:36px; width:208px;}
+.topBar{}
+.topBar a{display: inline-block;color: #fff;line-height: 60px;text-indent:-99999px;}
+.topBar a.loginOutIco{background-position: 0 -188px; width: 23px; height: 24px;margin:19px 0 0 0;}
+.topBar a.msgIco{background-position: 0 -262px; width: 25px; height: 25px;margin:18px 0 0 11px;}
+.topBar .userInfo{padding:13px 40px 0 15px;}
+.topBar .userInfo img{-webkit-border-radius: 36px;-moz-border-radius: 36px;border-radius: 36px;}
+.topBar .userInfo dl{padding-left: 12px;text-align:right;}
+.topBar .userInfo dl dt{font-size: 14px;line-height: 20px;}
+.topBar .userInfo dl dd{font-size: 12px;color: #c3eafc;}
+
+#leftMenu{position: absolute;top: 60px;left: 0;width: 120px;bottom: 32px;border-right: 1px solid #e0e0e0; background-color: #f2f2f2;overflow-y: auto;}
+#leftMinMenu{position: absolute;top: 60px;left: 0;width: 36px;bottom: 32px;border-right: 1px solid #e0e0e0; background-color: #f2f2f2;overflow-y: auto;display:none;}
+.leftOpt{position: absolute;height: 27px;line-height:27px;width: 10px;color: #fff;cursor: pointer;z-index: 10;}
+.leftClose{background: url(../images/leftClose.jpg) no-repeat;left: 121px;}
+.leftOpen{background: url(../images/leftOpen.jpg) no-repeat;left: 37px;}
+.menu{line-height: 40px;}
+.menu li a{display: block;border-bottom: 1px solid #e1e1e1;color: #505050;background-color: #f2f2f2;font-size: 14px;}
+.menu li a i{display:inline-block;}
+.menu li a i.accountIcon{background-position: 0 0; width: 14px; height: 13px;margin:0 9px 0 11px;}
+.menu li a i.circleIcon{background-position: 0 -63px; width: 15px; height: 15px;margin:0 10px;}
+.menu li a i.microblogIcon{background-position: 0 -128px; width: 10px; height: 10px;margin:0 11px 0 13px;}
+.menu li a.selected{background-color: #fff;}
+.minMenu{line-height: 40px;}
+.minMenu a{height:40px;display: block;border-bottom: 1px solid #e1e1e1;color: #505050;background-color: #f2f2f2;text-indent:-99999px;}
+.minMenu a.accountIcon{background-position: 11px 14px;}
+.minMenu a.circleIcon{background-position: 10px -51px;}
+.minMenu a.microblogIcon{background-position: 13px -112px;}
+.minMenu a.selected{background-color: #fff;}
+
+#main{position: absolute;top: 60px;left: 121px;right: 0;bottom: 32px;background-color: #fff;}
+#mainiframe{position:absolute;bottom:0; height: 100%;width:100%;overflow: auto}
+
+#footer{height: 32px;line-height: 32px;text-align: center;background-color: #e3e3e3;position: absolute;bottom: 0;left: 0;right: 0;font-size: 10px;}

@@ -1,0 +1,16 @@
+{
+    "data": {
+        "workBenchList": [
+            {
+                "id": "1",
+                "imgPath": "../../../common/images/w1.jpg"
+            },{
+                "id": "2",
+                "imgPath": "../../../common/images/w2.jpg"
+            },{
+                "id": "3",
+                "imgPath": "../../../common/images/w3.jpg"
+            }
+        ]
+    }
+}

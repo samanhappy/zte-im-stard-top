@@ -1,0 +1,158 @@
+#framePage{position:absolute;top:0;bottom:0;left:0;right:0;overflow-y:auto;}
+#pageWrap{padding:0 30px 30px 30px;}
+
+#kkpager {margin-top: 30px;text-align: center;min-width: 730px;}
+
+
+/*S 弹出窗口页面*/
+.dialogBd{position:absolute;top:0;bottom:38px;font-size:14px;left:0;right:0;background-color: #fff;overflow-y:auto;border-top:1px solid #e0e7ef;color:#7a7a7a;}
+.dialogBd1{position:absolute;top:0;left:0;right:0;background-color: #fff;overflow-y:auto;border-top:1px solid #e0e7ef;}
+.dialogBtns{position:absolute;height: 38px;bottom:0;left: 24px;right: 24px;}
+.dialogBtns a{display: inline-block;text-align: center;font-size:12px;width:64px;height:25px;line-height:27px;color: #fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.dialogBtns .add{float:left;background-color: #6287ae;width:64px;height:25px;line-height:25px;border:0;cursor:pointer;color: #fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.dialogBtns .add:hover{background-color: #507aa5;}
+.dialogBtns .cancel{float:right;background-color: #a9a9a9;}
+.dialogBtns .cancel:hover{background-color: #9d9a9a;}
+
+.dialogBtns1{position:absolute;background-color:#eff3f7;height: 32px;padding-top:6px;bottom:0;left: 0;right: 0;text-align:center;}
+.dialogBtns1 a{display: inline-block;text-align: center;font-size:12px;width:64px;height:25px;line-height:25px;color: #fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.dialogBtns1 .add{background-color: #6287ae;width:64px;height:25px;margin-right:85px;line-height:25px;border:0;cursor:pointer;color: #fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.dialogBtns1 .add:hover{background-color: #507aa5;}
+.dialogBtns1 .cancel{background-color: #a9a9a9;}
+.dialogBtns1 .cancel:hover{background-color: #9d9a9a;}
+
+/*E 弹出窗口页面*/
+
+/*S 公用pageBar*/
+.pageBar{padding:29px 0 14px 0;border-bottom: 1px dashed #c0cfdf;overflow:hidden;min-width: 730px;}
+.barLink{}
+.barLink a{display: inline-block;width:80px;height:25px;line-height:25px;text-align:center;margin-right: 14px;color:#fff;background-color:#6287ae;font-size:13px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.barLink a:hover{background-color:#567aa0;}
+.searchBox{width: 234px;height: 25px;border: 1px solid #6287ae;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.searchBox input{float:left;padding: 5px 10px;border: none;height:15px;line-height:15px;width: 187px;font-size:13px;}
+.searchBox a{float:left;border-left: 1px solid #eaeaea;display: inline-block;width: 25px;height:24px;line-height:24px;background:url(../images/icon.png) no-repeat;text-indent:-99999px;}
+.searchBox a.searchBtn{background-position: 5px -333px;}
+.microblogSearch{}
+.microblogSearch select{float:left;border:1px solid #6287ae;padding:0 2px;color:#7a7a7a;height:25px;line-height:25px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.microblogSearch .dateInput{float:left;margin-left:10px;border:1px solid #6287ae; color:#7a7a7a;width:114px;height:23px;line-height:23px;background:url(../images/dateBg.png) 114px 10px no-repeat;padding:0 7px;font-size:13px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.microblogSearch .keywordBox{float:left;margin-left:10px;width: 128px;height: 23px;border: 1px solid #6287ae;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.microblogSearch .keywordBox input{float:left;width: 80px;padding: 5px 10px;color:#7a7a7a;border: none;height:13px;line-height:13px;font-size:13px;}
+.microblogSearch .keywordBox a{float:left;border-left: 1px solid #eaeaea;display: inline-block;width: 25px;height:23px;line-height:24px;background:url(../images/icon.png) no-repeat;text-indent:-99999px;}
+.microblogSearch .keywordBox a.searchBtn{background-position: 5px -333px;}
+/*E 公用toolBar*/
+
+/*S 数据列表*/
+.dataList{margin-top: 15px;min-width: 730px;}
+.dataList table{table-layout:fixed;width:100%;border-collapse: collapse;border-spacing: 0;}
+.dataList table thead{border-left: 1px solid #e4e4e4;border-right: 1px solid #e4e4e4;}
+.dataList table thead th,.dataList table tbody td{padding: 12px 10px;text-align: center;border:1px solid #e4e4e4;}
+.dataList table thead th{background-color: #f2f2f2;border-width:1px 0 1px;}
+.dataList table thead th .titleItem{position: relative;width:88px;margin:0 auto;cursor: pointer;}
+.dataList table thead th .titleItem .downIco{display:inline-block;background-position: 0 -403px; width: 8px; height: 6px;margin-left:5px;}
+.dataList table thead th .showItem{display:none;position: absolute;top:0;left:0;width:86px;height:100px;padding-top: 28px;z-index:100;}
+.dataList table thead th .showItem em{position: absolute;top:21px;left:35px;height:8px;width:14px;background: url(../images/dot.png) no-repeat;z-index:200;}
+.dataList table thead th .titleItem:hover .showItem{display: block;}
+.dataList table thead th .titleItem i{font-size:7px;color:#909090;margin-left: 3px;}
+.dataList table thead th .showItem span{display:inline-block;border:1px solid #d3d4d4;width:84px;width:86px;background-color:#fff;padding: 5px 0;}
+.dataList table thead th .showItem span a{display:block;height: 30px;line-height: 33px;font-size: 10px;}
+.dataList table thead th .showItem span a:hover{color: #6186b0;}
+.dataList table tbody td{border:1px solid #ddd;word-break: break-all;}
+.dataList table tbody td a{margin: 0 5px;color: #6287ae;text-decoration:underline;}
+.dataList table tbody td.miroblogCol a{color: #5d5d5d;}
+.dataList .itemBg{background-color:#fcfcfc;}
+/*E 数据列表*/
+
+/*S 表格样式*/
+.dataTable{margin-top:15px;table-layout:fixed;width:100%;border-collapse: collapse;border-spacing: 0;font-size: 12px;}
+.dataTable th,.dataTable td{padding:10px 18px;border:1px solid #e4e4e4;}
+.dataTable th{background-color: #f2f2f2;width: 150px;color: #303030;}
+.dataTable td{color: #909090;}
+.dataTable td span{padding: 10px 10px 0 0;}
+.dataTable span.upload {position: relative;margin: 0 0 0 10px;}
+.dataTable span.upload a{color:#2a5495;}
+.dataTable span.upload input{position: absolute;left: 0;top: 0;opacity: 0;filter: alpha(opacity = 0);width: 50px\0;*width: 50px;}
+/*E 表格样式*/
+
+/********************************S 账户管理*************************************************/
+/*S 账号权限设置*/
+.accountSettingWrap{padding:16px 0 0 24px;}
+.accountSettingWrap h2{font-weight:normal;padding-bottom:14px;}
+.accountSettingWrap p{}
+/*E 账号权限设置*/
+
+/*S 账号开启*/
+.accountOpenWrap{padding:16px 0 0 0;}
+.accountOpenWrap p{text-align:center;}
+/*E 账号开启*/
+
+/*S 账号停用*/
+.accountStopWrap{padding:0 24px;}
+.accountStopWrap p{height:45px;line-height:45px;}
+.accountStopWrap textarea{font-size:13px;border:1px solid #6287ae;height:62px;width:190px;padding:10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+/*E 账号停用*/
+
+/*S 导入数据*/
+.upflieBox{padding:28px 0 0 46px;color:#909090;}
+.upflieBox ul{padding-top:10px;}
+.upflieBox ul li{line-height:36px;}
+.upflieBox ul li span{display:inline-block;width:50px;}
+.upflieBox a.upFileBtn{display:inline-block;background-color:#6287ae;width:64px;text-align:center;height:25px;line-height:25px;color:#fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;font-size:12px;}
+.uploadedFile{background:url(../images/tplIco.png) no-repeat;padding-left:34px;margin:15px 0 0 94px;height:34px;line-height:34px;}
+.downTplBox{width:64px;text-align:center;padding:28px 100px 0 0;}
+.downTplBox a.downTplBtn{display:inline-block;background-color:#6287ae;width:64px;text-align:center;height:25px;line-height:25px;color:#fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;font-size:12px;}
+/*S 导入数据*/
+
+/*S 账号详情*/
+.detailWrap{color:#7a7a7a;}
+.datailFace{padding:12px 0 0 10px;width:64px;text-align:center;}
+.datailFace .facePic{display:inline-block;width:56px;height:56px;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;}
+.datailFace p{height:25px;line-height:25px;margin-top:5px;background-color:#6287ae;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;color:#fff;font-size:13px;}
+.detailWrap ul{width:162px;padding-top:5px;}
+.detailWrap ul li{line-height:20px;font-size:12px;padding:6px 10px 6px 0;}
+.detailWrap ul li p{font-size:14px;}
+/*E 账号详情*/
+/********************************E 账户管理*************************************************/
+
+/*S 微博详情*/
+.pageName{color:#6287ae;position:absolute;top:62px;left:30px;background-color:#fff;}
+.microblogWrap{margin:20px 0;padding:0 120px;min-width:600px;}
+.microblogDetailWrap{padding-top:8px;overflow:hidden;}
+.microblogDetailWrap .microblogAvatar{border:1px solid #d1d1d1;margin:0 -80px 0 10px;height:56px;width:56px;-webkit-border-radius: 56px;-moz-border-radius: 56px;border-radius: 56px;}
+.microblogDetailBox{margin-left:80px;}
+.microblogDetailBox .account{color:#5d5d5d;font-weight:normal;padding:0 0 10px 0;}
+.microblogDetailBox .forwardBox{color:#7a7a7a;line-height:22px;}
+/* .microblogDetailBox .forwardBox span{color:#6c8bae;} */
+.microblogDetailBox .microblogContent{background-color:#f7f7f7;margin-top:8px;padding:10px;position:relative;overflow:hidden;}
+.microblogDetailBox .microblogContent em.dot{position:absolute;width:15px;height:8px;top:-8px;left:10px;background:url(../images/dot1.jpg) no-repeat;}
+.microblogContent .content{color:#5d5d5d;}
+.microblogDetailBox .position{margin-left:18px;font-size:11px;color:#7a7a7a;background:url(../images/position.png) 7px 5px #dedede no-repeat;display:inline-block;height:20px;line-height:20px;padding:0 8px 0 16px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+.microblogContent .picList{padding-top:12px;overflow:hidden;}
+.microblogContent .picList li{float:left;display:inline;width:80px;height:80px;border:1px solid #d7d7d7;margin-right:5px;}
+.microblogContent .picList li img{width:80px;height:80px;}
+.microblogContent .microblogNum{padding-top:12px;color:#7a7a7a;font-size:11px;}
+.microblogContent .microblogNum .tools span{background:url(../images/detailIco.png) no-repeat;padding-left:18px;color:#b4b4b4;font-size:11px;margin-left:15px;}
+.microblogContent .microblogNum .tools span em{font-weight:normal;padding-left:2px;}
+.microblogContent .microblogNum .tools span.forward{background-position: 0 2px;}
+.microblogContent .microblogNum .tools span.commentary{background-position: 0 -58px;}
+.microblogContent .microblogNum .tools span.praise{background-position: 0 -120px;padding-left:16px;}
+.microblogDetailBox .sendBox{height:34px;line-height:34px;color:#7a7a7a;font-size:11px;}
+.microblogDetailBox .sendBox .open{padding-left:18px;background:url(../images/open.png) 0 10px no-repeat;}
+.commentWrap{}
+.commentWrap .commentOpt{height:34px;border-bottom:2px solid #b0c3d6;}
+.commentWrap .commentOpt li{float:left;display:inline;line-height:34px;text-align:center;width:33%;color:#7a7a7a;font-size:12px;}
+.commentWrap .commentOpt li span{background:url(../images/commentIco.png) no-repeat;padding-left:22px;}
+.commentWrap .commentOpt li span em{font-weight:normal;}
+.commentWrap .commentOpt li.forward span{background-position: 0 1px;}
+.commentWrap .commentOpt li.commentary{background:url(../images/commentDot.png) bottom center no-repeat;}
+.commentWrap .commentOpt li.commentary span{background-position: 0 -62px;}
+.commentWrap .commentOpt li.praise span{background-position: 0 -128px;}
+.commentWrap .commentList li{padding:12px 0 0 0;}
+.commentWrap .commentList li .avatar{border:1px solid #d1d1d1;margin:0 -73px 0 21px;height:36px;width:36px;-webkit-border-radius: 36px;-moz-border-radius: 36px;border-radius: 36px;}
+.commentWrap .commentList li .commentBox{margin-left:73px;min-height:50px;border-bottom:1px dashed #e5e5e5;position:relative;}
+.commentWrap .commentList li .commentContent{padding-bottom:12px;margin-right:100px;color:#5d5d5d;}
+.commentWrap .commentList li .commentContent p{padding-bottom:12px;}
+.commentWrap .commentList li .commentContent p span{color:#6287ae;}
+.commentWrap .commentList li .commentContent em{font-weight:normal;font-size:11px;color:#7a7a7a;}
+.commentWrap .commentList li .commentDelBtn{position:absolute;top:7px;right:0;display: inline-block;background-color: #6287ae;text-align: center;font-size:13px;width:80px;height:25px;line-height:25px;color: #fff;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px}
+
+/*E 微博详情*/
